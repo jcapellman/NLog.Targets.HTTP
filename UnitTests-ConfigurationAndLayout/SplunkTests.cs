@@ -26,7 +26,9 @@ namespace UnitTests_ConfigurationAndLayout
         [Test]
         public void LoadTest()
         {
-            Parallel.For(0, 100, i => _logger.Info($"{i} at {DateTime.Now}"));
+            Parallel.For(0, 100, i => {
+                _logger.Info($"{i} at {DateTime.Now}");
+            });
         }
 
         [Test]
