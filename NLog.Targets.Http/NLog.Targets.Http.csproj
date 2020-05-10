@@ -9,13 +9,15 @@
     <Copyright>Copyright (c) $(CurrentYear) Dariusz Danielewski and Stan Smith, Copyright 2013-2015 Splunk, Inc. </Copyright>
     <PackageTags>nlog;nlog-target;splunk;logging</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/DarekDan/NLog.Targets.HTTP/master/nlog.ico</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/DarekDan/NLog.Targets.HTTP</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jcapellman/NLog.Targets.HTTP</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/DarekDan/NLog.Targets.HTTP/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/DarekDan/NLog.Targets.HTTP</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <RepositoryUrl>git://github.com/jcapellman/NLog.Targets.HTTP</RepositoryUrl>
+    <Version>1.0.2</Version>
     <ApplicationIcon>nlog.ico</ApplicationIcon>    
-    <PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.0.2
+-Fixed Xamarin Mac (Forms) issue with Proxy
+
 Version 1.0.1
 - Refactored for a single HttpClient as HttpWebRequest was creating too many connection in TIMED_WAIT state under load.
 - Upgraded .Net Standard to 2.1 and introduced support for Core 3.0 and Framework 4.8
@@ -39,13 +41,15 @@ Version 0.0.2
 Version 0.0.1
 - Big thanks to Stan Smith for insiting to make it lean and performant.
 - First publish to NuGet.
-    </PackageReleaseNotes>
+</PackageReleaseNotes>    
+    <PackageId>NLog.Targets.Https</PackageId>    
+    <Product>NLog.Targets.Https</Product>
   </PropertyGroup>
 
   <!--common NuGet package refs -->
   <ItemGroup>
     <PackageReference Include="NLog" Version="4.6.7" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4"/>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
   <!--.NET Standard 2.1 config -->

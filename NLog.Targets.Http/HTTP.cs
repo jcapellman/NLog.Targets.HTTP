@@ -343,7 +343,8 @@ namespace NLog.Targets.Http
                     _httpClient.DefaultRequestHeaders.Accept.Clear();
                     _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Accept));
 
-                    if (_handler.UseProxy)
+                    /* Never utilize Proxy */
+                    if (false && _handler.UseProxy)
                     {
                         _handler.Proxy = new WebProxy(new Uri(ProxyUrl))
                             {UseDefaultCredentials = string.IsNullOrWhiteSpace(ProxyUser)};
